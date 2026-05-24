@@ -6,4 +6,6 @@ def fibonacci(n):
 
 
 if __name__ == "__main__":
-    print(list(fibonacci(10)))
+    import sys
+    n = int(sys.argv[1]) if len(sys.argv) > 1 else 10
+    print(list(fibonacci(n)))
