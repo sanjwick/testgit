@@ -6,10 +6,18 @@ def fibonacci(n):
 
 
 if __name__ == "__main__":
-    import sys
     import matplotlib.pyplot as plt
 
-    n = int(sys.argv[1]) if len(sys.argv) > 1 else 10
+    while True:
+        try:
+            n = int(input("Enter the number of Fibonacci terms to generate: "))
+            if n <= 0:
+                print("Please enter a positive integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a positive integer.")
+
     values = list(fibonacci(n))
     print(values)
 
